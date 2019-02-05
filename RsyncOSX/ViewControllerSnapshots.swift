@@ -83,6 +83,13 @@ class ViewControllerSnapshots: NSViewController, SetDismisser, SetConfigurations
         combobox.selectItem(at: index)
     }
 
+    // Userconfiguration button
+    @IBAction func userconfiguration(_ sender: NSButton) {
+        globalMainQueue.async(execute: { () -> Void in
+            self.presentViewControllerAsSheet(self.viewControllerUserconfiguration!)
+        })
+    }
+
     @IBAction func updatedeletesnapshotsnum(_ sender: NSSlider) {
         self.stringdeletesnapshotsnum.stringValue = String(self.deletesnapshots.intValue)
         self.numbersinsequencetodelete = Int(self.deletesnapshots.intValue - 1)
@@ -242,7 +249,7 @@ class ViewControllerSnapshots: NSViewController, SetDismisser, SetConfigurations
 extension ViewControllerSnapshots: DismissViewController {
 
     func dismiss_view(viewcontroller: NSViewController) {
-        self.dismiss(viewcontroller)
+        self.dismissViewController(viewcontroller)
         if self.snapshotsloggdata?.remotecatalogstodelete != nil {
             self.snapshotsloggdata?.remotecatalogstodelete = nil
             self.info(num: 2)
