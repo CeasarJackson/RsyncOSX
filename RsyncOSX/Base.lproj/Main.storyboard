@@ -2528,7 +2528,7 @@
                                 <rect key="frame" x="254" y="380" width="205" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Profile :" id="TqG-6l-QwU">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -3005,7 +3005,7 @@
                                 <rect key="frame" x="912" y="2" width="162" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Profile :" id="dTX-H7-8VC">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -4586,14 +4586,25 @@ DQ
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6M-mZ-vGU">
-                                            <rect key="frame" x="300" y="14" width="219" height="18"/>
+                                            <rect key="frame" x="300" y="14" width="153" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Remove --compress parameter" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zF8-9O-ajg">
+                                            <buttonCell key="cell" type="check" title="remove &quot;--compress&quot;" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zF8-9O-ajg">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="removecompressparameter:" target="K9c-yf-VMY" id="DJO-A6-xe7"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYV-Fn-gVI">
+                                            <rect key="frame" x="300" y="39" width="120" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="remove &quot;-e ssh&quot;" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Uaa-qJ-y0g">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="removeesshparameter:" target="K9c-yf-VMY" id="n5R-ia-X1v"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -4637,6 +4648,7 @@ DQ
                         <outlet property="combo9" destination="5I0-rR-9OO" id="Pvu-0D-Dia"/>
                         <outlet property="compressparameter" destination="S6M-mZ-vGU" id="L3P-jl-fP0"/>
                         <outlet property="donotdeletebutton" destination="qDc-Ou-8uj" id="PC6-7q-WDV"/>
+                        <outlet property="esshparameter" destination="hYV-Fn-gVI" id="Hip-8F-1JD"/>
                         <outlet property="param1" destination="8lV-18-VgA" id="NpZ-IK-7Vl"/>
                         <outlet property="param10" destination="eH7-7W-QkX" id="4zd-Ig-50I"/>
                         <outlet property="param11" destination="0II-7a-Edf" id="YeC-Vz-tjI"/>
